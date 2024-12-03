@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            background-image: url(th.png);
+        }
+
+        header {
+            background-color: transparent;
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            animation: logo-fade-in 1.5s ease-in-out;
+        }
+
+        header .logo:hover {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffe6f0;
+        }
+
+        .banner {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+            animation: slide-in 1s ease-in-out;
+            opacity: 0.4;
+            transition: 1.5s;
+        }
+
+        .banner:hover {
+            padding: 50px 10px;
+            opacity: 0.6;
+            color: #0e0301;
+        }
+
+        .banner h2 {
+            font-size: 2.5rem;
+            cursor: grabbing;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            cursor: progress;
+        }
+
+        .products {
+            margin: 40px 20px;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-style: Arial;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+            background-image: url(6300134.png);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item h3, .product-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .product-item p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .add-to-cart {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background: #0e0301;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background: #776a6d;
+            border-radius: 16px;
+            transform: translateY(10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+            height: 10px;
+        }
+
+        @keyframes logo-fade-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="logo"><a href="" target="_blank"></a>Shopping App</span></h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.google.com" target="_blank">Home</a></li>
+                <li><a href="https://www.meesho.com" target="_blank">Products</a></li>
+                <li><a href="https://www.flipkart.com" target="_blank">Cart</a></li>
+                <li><a href="https://www.amazon.in" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Welcome to Our Shop!</h2>
+                <p>Find the best deals on all your favorite products.</p>
+            </div>
+        </section>
+        <section class="products">
+            <h2><a href="https://sbteonline.bihar.gov.in/dashboard" target="_blank">EMS</a></h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <h3><a href="https://lms.netacad.com/course/view.php?id=2163219" target="_blank">HELLO</a></h3>
+                    <p>$10.00</p>
+                    <button id="55" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h4><a href="https://onlinetest.spoken-tutorial.org/login/index.php" target="_blank">WORLD</a></h4>
+                    <p>$20.00</p>
+                    <button id="66" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Shopping App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
